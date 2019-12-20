@@ -1,0 +1,45 @@
+<a routerLink="/login" type="button" class="btn btn-dander btn-lg float-right" role="button" (click)="logout()" aria-label="Basic example">Log Out</a>
+
+<h2>Lecturer Weekly Plan </h2>
+
+<div >
+  <table class="table table-bordered ">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Monday</th>
+      <th scope="col">Tuesday</th>
+      <th scope="col">Wednesday</th>
+      <th scope="col">Thursday</th>
+      <th scope="col">Friday</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let timeOfScheduler of timeOfScheduler">
+      <th scope="row">{{timeOfScheduler.startTime}}.00</th>
+      <td class="table-primary" *ngIf="timeOfScheduler.monday!== null ">{{timeOfScheduler.monday.crn}} | {{timeOfScheduler.monday.building}} | {{timeOfScheduler.monday.room}} | {{timeOfScheduler.monday.title}}</td>
+      <td class="table-primary" *ngIf="timeOfScheduler.monday=== null "></td>
+
+      <td class="table-success" *ngIf="timeOfScheduler.tuesday!== null ">{{timeOfScheduler.tuesday.crn}} | {{timeOfScheduler.tuesday.building}} | {{timeOfScheduler.tuesday.room}} | {{timeOfScheduler.tuesday.title}}</td>
+      <td class="table-success" *ngIf="timeOfScheduler.tuesday=== null "></td>
+
+
+
+      <td class="table-primary"*ngIf="timeOfScheduler.wednesday!== null ">{{timeOfScheduler.wednesday.crn}} | {{timeOfScheduler.wednesday.building}} | {{timeOfScheduler.wednesday.room}} | {{timeOfScheduler.wednesday.title}}</td>
+      <td class="table-primary"*ngIf="timeOfScheduler.wednesday=== null "></td>
+
+
+
+
+      <td class="table-success"*ngIf="timeOfScheduler.thursday!== null ">{{timeOfScheduler.thursday.crn}} | {{timeOfScheduler.thursday.building}} | {{timeOfScheduler.thursday.room}} | {{timeOfScheduler.thursday.title}}</td>
+      <td class="table-success"*ngIf="timeOfScheduler.thursday=== null "></td>
+
+
+
+      <td class="table-primary"*ngIf="timeOfScheduler.friday!== null ">{{timeOfScheduler.friday.crn}} | {{timeOfScheduler.friday.building}} | {{timeOfScheduler.friday.room}} | {{timeOfScheduler.friday.title}}</td>
+      <td class="table-primary"*ngIf="timeOfScheduler.friday=== null "></td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>

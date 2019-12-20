@@ -1,0 +1,51 @@
+<div class="container">
+
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col-6">
+        <div class="p-3 mb-2 bg-dark text-white" style="height: 100%;">
+          <h3>REGISTIRATION</h3>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail11">Name</label>
+              <input type="email" class="form-control" id="exampleInputEmail11" [(ngModel)]="user.name" aria-describedby="emailHelp" placeholder="Name" name="email" name="name">
+
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail21">Surname</label>
+              <input type="email" class="form-control" id="exampleInputEmail21" [(ngModel)]="user.surname" aria-describedby="emailHelp" placeholder="Surname" name="surname">
+
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail31">Faculty</label>
+              <input type="email" class="form-control" id="exampleInputEmail31" [(ngModel)]="user.faculty" aria-describedby="emailHelp" placeholder="Faculty" name="faculty">
+
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail41">Department</label>
+              <input type="email" class="form-control" id="exampleInputEmail41" [(ngModel)]="user.department" aria-describedby="emailHelp" placeholder="Department" name="department" >
+
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail51">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail51"  [(ngModel)]="user.email" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="user.password" placeholder="Password" name="password">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your personal info with anyone else.</small>
+            </div>
+
+            <button (click)="register()"type="button" class="btn btn-primary btn-lg btn-block">REGISTER</button>
+          </form>
+        </div>
+      </div>
+      <div class="col">
+      </div>
+
+
+    </div>
+
+</div>
